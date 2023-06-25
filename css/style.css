@@ -32,6 +32,15 @@ body{
     float: right;
     clear: both;
 }
+.center{
+    display: block;
+    margin: 20px auto;
+    clear: both;
+    background-color: #9fa1a2;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
 #send-container{
     text-align: center;
     margin: 20px;

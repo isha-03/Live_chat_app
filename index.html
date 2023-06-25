@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChitChat</title>
-    <script src="js/client.js"></script>
+    <!-- standalone built exposes the server to client server -->
+    <!-- defer will make the script run in background otherwise script and dom will be seperated -->
+    <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script defer src="js/client.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,12 +15,11 @@
         <img class="logo" src="logo4.png" alt="">
     </nav>
     <div class="container">
-        <div class="message left">harry: hey rohan how are you?</div>
-        <div class="message right">rohan: hi harry i am fine wbu?</div>
+        
     </div>
     <div class="send">
         <form action="#" id="send-container">
-            <input type="text" id="messageIp">
+            <input type="text" name="messageIp" id="messageIp">
             <button class="btn" type="submit">send</button>
         </form>
     </div>
